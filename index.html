@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="nav-bar">
+    <button class="menu-button js-menu-button">
+      <img class="menu-img" src="img/menu-img.svg" alt="" height="30px" width="30px">
+    </button>
+    <div class="title-container">
+      <h1>Etch a Sketch</h1>
+    </div>
+  </div>
+
+  <div class="sidebar js-sidebar">
+    <div class="close-button js-close-button">
+      <img src="img/close-button.svg" alt="" height="30px" width="30px">
+    </div>
+
+    <div class="buttons-container">
+      <button class="rainbow-mode-button js-rainbow-mode-button">Rainbow Mode</button>
+      <button class="js-randomize-button randomize-button">Randomize</button>
+      <button class="fill-button js-fill-button">Fill</button>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <div class="top">
+      <label for="">Grid Size:</label>
+      <p class="grid-size" id="rangeValue">16 x 16</p>
+      <input class="js-range-input" type="range" min="8" max="90" value="16" oninput="rangeValue.innerText = `${this.value} x ${this.value}`">
+    </div>
+
+    <div class="grid js-grid">
+
+    </div>
+
+    <div class="bottom">
+      <button class="reset-button js-reset-button">Reset Board</button>
+      <button class="erase-button js-erase-button">Eraser</button>
+      <input type="color" class="js-color-input">
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
